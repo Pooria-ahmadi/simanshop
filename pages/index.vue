@@ -1,7 +1,7 @@
 <template>
   <div class="max-width-1160px mb-6">
     <div class="columns is-vcentered mt-6 has-text-centered-mobile mx-0">
-      <div class="column">
+      <div class="column is-5">
         <div>
           <img src="Asset 3@4x.png" alt="">
           <img src="Asset 2@4x.png" alt="">
@@ -29,7 +29,7 @@
           </button>
         </div>
       </div>
-      <div class="column">
+      <div class="column has-text-centered">
         <img src="/siman.png" alt="">
       </div>
     </div>
@@ -138,7 +138,7 @@
         </p>
       </div>
     </div>
-    <div class="columns mt-5 is-vcentered mx-0">
+    <div class="columns mt-3 is-vcentered mx-0">
       <div class="column is-5">
         <p class="is-size-5 has-text-black has-text-weight-bold">
           فروش سیمان در صنعت ساختمانی
@@ -162,7 +162,7 @@
       صنعت ساخت و ساز دارند و تأمین مواد اولیه برای پروژه‌های عظیم ساختمانی را بر عهده دارند. این شرکت‌ها باید با
       استانداردهای صنعتی، قوانین محیط زیست و نظارت‌های دولتی رعایت کنند.
     </p>
-    <div class="columns mt-5 is-vcentered mx-0">
+    <div class="columns mt-3 is-vcentered mx-0">
       <div class="column is-5">
         <p class="mt-4 has-text-justified line-height-description has-text-black has-text-weight-bold">
           شرکت ما یکی از پیشگامان در صنعت فروش سیمان است. با بیش از دو دهه تجربه، ما به عنوان یک منبع قابل اعتماد برای
