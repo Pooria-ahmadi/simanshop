@@ -48,7 +48,8 @@
       </p>
     </div>
     <div class="columns is-multiline mx-0 mt-5">
-      <div class="column is-one-quarter" v-for="(image, index) in images" :key="index">
+      <div class="column is-one-quarter is-three-fifths-mobile has-text-centered" v-for="(image, index) in images"
+        :key="index">
         <div class="image-container">
           <img :src="image.src" :alt="image.alt">
           <div class="corner-like has-background-black p-2">
@@ -68,6 +69,9 @@
         <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
           120,000
         </p>
+        <button class="button is-black mt-4">
+          افزودن به سبد خرید
+        </button>
       </div>
     </div>
     <div class="columns mt-5 is-vcentered mx-0">
@@ -94,29 +98,55 @@
         آلومینیوم، اکسید سیلیسیم، اکسید آهن، اکسید منیزیم و اکسید های قلیایی که میل ترکیب سیمان با آب داشته و در مجاورت
         هوا و در زیر آب به مرور سخت می گردد و دارای مقاومت می شود.
       </p>
-      <p class="is-size-5 has-text-black has-text-weight-bold mt-5">
-        سیمان چیست؟
-      </p>
-      <p class="mt-4 has-text-justified line-height-description">
-        سیمان یک ماده پودری است که با افزودن آب تشکیل پسته‌ای سخت می‌دهد و برای ساخت سازه‌های ساختمانی استفاده می‌شود.
-        این ماده به عنوان چسب و اتصال دهنده در بتن و ملات استفاده می‌شود و خواص فشاری بالایی دارد.
-      </p>
-      <p class="mt-4">
-        انواع تیپ سیمان پرتلند:
-      </p>
-      <ul class="mt-4 list-style-type-disc pr-5">
-        <li>سیمان پرتلند معمولی به عنوان سیمان تیپ ۱</li>
-        <li>سیمان پرتلند اصلاح شده به عنوان سیمان تیپ ۲</li>
-        <li>سیمان پرتلند زود سخت شونده به عنوان سیمان تیپ ۳</li>
-        <li>سیمان پرتلند با حرارت کم به عنوان سیمان تیپ ۴</li>
-        <li>سیمان پرتلند ضد سولفات بانوان سیمان تیپ ۵</li>
-      </ul>
+      <div class="columns is-vcentered mt-6 has-text-centered-mobile mx-0">
+        <div class="column is-5">
+          <p class="is-size-5 has-text-black has-text-weight-bold mt-5">
+            سیمان چیست؟
+          </p>
+          <p class="has-text-justified line-height-description">
+            انواع سیمان از تیپ ۱ تا تیپ ۵ تقسیم بندی می شوند. بخش مهمی از تفاوت انواع تیپ سیمان با یکدیگر بر اساس زودگیر
+            یا زودسخت بودن و میزان حرارتی است که به هنگام ترکیب آزاد می سازند. تقسیم بندی اصلی سیمان بر اساس نوع مواد
+            اولیه آن به شکل پرتلند و غیرپرتلند خواهد بود. خط تولید سیمان پرتلند و تجهیزات مورد نیاز برای تولید انواع
+            سیمان کاملا یکسان هستند. دلیل عمده ای که باعث تفاوت انواع تیپ سیمان می گردد، نوع مواد اولیه و درجه حرارت
+            کوره در زمان تولید است. برای تولید سیمان پرتلند معمولی دمای کوره در حدود 1500 درجه خواهد بود. در ادامه به
+            معرفی هر چه بهتر انواع سیمان می پردازیم.
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <img src="/siman5.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="columns has-background-grey-lighter is-vcentered mt-6 has-text-centered-mobile mx-0">
+      <div class="column">
+        <div class="is-relative">
+          <img src="/siman6.png" alt="">
+          <p class="text-on-img has-text-white has-text-weight-bold">
+            انواع تیپ سیمان پرتلند:
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="box has-background-grey-lighter ">
+          سیمان پرتلند معمولی
+        </div>
+        <div class="box has-background-grey-lighter my-4">
+          سیمان پرتلند معمولی
+        </div>
+        <div class="box has-background-grey-lighter">
+          سیمان پرتلند معمولی
+        </div>
+      </div>
+      <div class="column">
+
+      </div>
     </div>
     <p class="is-size-4 has-text-black has-text-weight-bold mt-5 mx-4">
       خرید سیمان
     </p>
     <div class="columns is-multiline mx-0 mt-5">
-      <div class="column is-one-quarter" v-for="(image, index) in images" :key="index">
+      <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
+        :key="index">
         <div class="image-container">
           <img :src="image.src" :alt="image.alt">
           <div class="corner-like has-background-black p-2">
@@ -136,6 +166,9 @@
         <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
           120,000
         </p>
+        <button class="button is-black mt-4">
+          افزودن به سبد خرید
+        </button>
       </div>
     </div>
     <div class="columns mt-3 is-vcentered mx-0">
