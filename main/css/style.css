@@ -73,6 +73,17 @@ body,
   left: 50%;
   transform: translateX(-50%);
 }
+.border-gret-dark{
+  border: 1px solid #b0b0b0;
+  width: 265px;
+}
+.title-type-siman{
+  position: absolute;
+  top: -35%;
+  right: -5%;
+  transform: translateX(-50%);
+}
+
 
 @media only screen and (min-width: 700px) {
   .justify-content-center-mobile {
@@ -139,10 +150,28 @@ body,
     line-height: 2.0em;
   }
 
+  .full-width-background {
+    width: 100%;
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 6%;
+    left: 7%;
+    height: 294px;
+    width: 1001px;
+    transform: skew(21deg, -6deg);
+    border: 2px solid rgb(8, 8, 8);
+    border-radius: 25px;
+    z-index: -1; /* اطمینان از اینکه زیر محتوای ستون‌ها قرار می‌گیرد */
+  }
+
+  
   .max-width-1160px {
     max-width: 1160px;
-    margin: auto;
+    margin: 0 auto; /* برای مرکزچین کردن محتوای داخلی */
   }
+  
 }
 
 .is-rounded-five {
