@@ -1,0 +1,179 @@
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url('~/fonts/Vazir-FD-WOL.eot') format('eot'),
+    url('~~/fonts/Vazir-FD-WOL.woff') format('woff'),
+    url('~~/fonts/Vazir-FD-WOL.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: boldvazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url('~/fonts/Vazir-Bold-FD-WOL.eot') format('eot'),
+    url('~/fonts/Vazir-Bold-FD-WOL.ttf') format('ttf'),
+    url('~/fonts/Vazir-Bold-FD-WOL.woff') format('woff'),
+    url('~/fonts/Vazir-Bold-FD-WOL.woff2') format('woff2');
+}
+
+body,
+* {
+  font-family: vazir !important;
+  
+}
+
+.font-bold-number {
+  font-family: boldvazir !important;
+}
+
+.border-radius-search-input-header {
+  border-radius: 17px;
+}
+
+.font-family {
+  font-family: vazir;
+}
+
+.border-radius {
+  border-radius: 10px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 0px 15px 15px 15px;
+}
+
+.text-decoration-line-grey {
+  text-decoration-line: line-through;
+  text-decoration-color: #a2a2a2;
+}
+
+.corner-like {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px 5px 5px 5px;
+  width: 37px;
+  height: 37px;
+  box-shadow: 0px 0px 0px 5px white;
+}
+
+.corner-like img {
+  width: 20px;
+  height: 20px;
+}
+.text-on-img{
+  position: absolute;
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.border-gret-dark{
+  border: 1px solid #b0b0b0;
+  width: 265px;
+}
+.title-type-siman{
+  position: absolute;
+  top: -35%;
+  right: -5%;
+  transform: translateX(-50%);
+}
+
+
+@media only screen and (min-width: 700px) {
+  .justify-content-center-mobile {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 370px) {
+  .position-absolute-text-about-we {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1160px;
+    width: 100%;
+  }
+
+  .background-image {
+    width: 100%;
+    display: block;
+    height: 80vh;
+  }
+
+  .border-radius-button {
+    top: 10px;
+    border-radius: 30px;
+  }
+
+  .line-height-description {
+    line-height: 2.0em;
+  }
+
+  .justify-content-center-mobile {
+    justify-content: center;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .position-absolute-text-about-we {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1160px;
+    width: 100%;
+  }
+
+  .background-image {
+    width: 100%;
+    display: block;
+    height: 350px;
+  }
+
+  .justify-content-center-mobile {
+    justify-content: right;
+  }
+
+  .list-style-type-disc {
+    list-style-type: disc;
+  }
+
+  .line-height-description {
+    line-height: 2.0em;
+  }
+
+  .full-width-background {
+    width: 100%;
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 6%;
+    left: 7%;
+    height: 294px;
+    width: 1001px;
+    transform: skew(21deg, -6deg);
+    border: 2px solid rgb(8, 8, 8);
+    border-radius: 25px;
+    z-index: -1; /* اطمینان از اینکه زیر محتوای ستون‌ها قرار می‌گیرد */
+  }
+
+  
+  .max-width-1160px {
+    max-width: 1160px;
+    margin: 0 auto; /* برای مرکزچین کردن محتوای داخلی */
+  }
+  
+}
+
+.is-rounded-five {
+  border-radius: 50px;
+}
