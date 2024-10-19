@@ -51,12 +51,14 @@
     <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
       <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
         :key="index">
+        <NuxtLink to="/product">
         <div class="image-container">
           <img :src="image.src" :alt="image.alt">
           <div class="corner-like has-background-black p-2">
             <img src="icons8-heart-30.png" alt="like">
           </div>
         </div>
+      </NuxtLink>
         <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
         <div class="is-flex is-align-items-center is-justify-content-center mt-2">
           <p class="has-text-danger is-size-7">
