@@ -55,19 +55,5 @@ export default {
 }
 </script>
 <style>
-.cart-icon {
-    position: relative;
-    display: inline-block;
-}
 
-.cart-count {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: rgb(1, 252, 22);
-    color: white;
-    border-radius: 50%;
-    padding: 5px 10px;
-    font-size: 12px;
-}
 </style>

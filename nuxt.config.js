@@ -24,8 +24,8 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'bulma/css/bulma.min.css',
-    'main/css/style.css',
+    '@/assets/bulma/css/bulma.min.css',
+    '@/assets/css/style.css',
     'aos/dist/aos.css'
   ],
 

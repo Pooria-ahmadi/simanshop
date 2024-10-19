@@ -1,45 +1,85 @@
 <template>
-  <div class="is-hidden-tablet-only is-hidden-mobile ">
-    <div class="box py-0">
-      <div class="columns max-width-1160px is-vcentered">
+  <div class="is-hidden-tablet-only is-hidden-mobile fixed">
+    <div class="box py-0 mb-3">
+      <div class="columns max-width-1160px is-vcentered py-3 mb-2">
         <div class="column">
-          <div class="navbar-start is-hidden-mobile ">
-            <NuxtLink class="navbar-item has-text-grey" to="/">
+          <div class="is-flex">
+            <NuxtLink class="has-text-grey text-hover-black" to="/">
               خانه
             </NuxtLink>
-            <div class="navbar-item has-dropdown is-hoverable">
-              <NuxtLink class="navbar-item has-text-grey" to="/">
-              محصولات
-            </NuxtLink>
-
-              <div class="navbar-dropdown">
-                <div class="navbar-item is-justify-content-center is-underlined my-5">
+            <div class="is-relative has-dropdown">
+              <NuxtLink class="has-text-grey text-hover-black pr-5 pb-5" to="/">
+                محصولات
+              </NuxtLink>
+              <div class="category-box has-background-white p-5">
+                <p class="has-text-black">
                   دسته بندی
-                </div>
-                <a class="navbar-item mb-4">
-                  سیمان
-                </a>
-                <a class="navbar-item mb-4">
-                  گچ
-                </a>
-                <a class="navbar-item mb-4">
-                 ماسه
-                </a>
-                <a class="navbar-item mb-4">
-                 بتن
-                </a>
-                <a class="navbar-item mb-4">
-                 سیمان سفید
-                </a>
-                <a class="navbar-item mb-4">
-                 سیمان سفید
-                </a>
+                </p>
+                <hr class="mt-2 width-70px">
+                <ul>
+                  <div class="has-subcategory" style="width: 181px;">
+                    <div style="width: 140px;">
+                      <li class="pr-3 category-item py-1 border-radius">سیمان</li>
+                    </div>
+                    <div class="subcategory-box has-background-white pt-3 pt-4">
+                      <a href="#" class="py-5">همه محصولات سیمان ></a>
+                      <p class="has-text-black pt-5 mt-4">
+                        انواع سیمان
+                      </p>
+                      <hr class="mt-2 width-70px">
+                      <ul>
+                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان پرتلند</li>
+                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان رنگی</li>
+                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان نسوز</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">گچ</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">ماسه</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">بتن</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان سفید</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">پودر سنگ</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">ملات</li>
+                </ul>
+              </div>
+              <div class="category-box has-background-white p-5">
+                <div class="vl" style=""></div>
+                <p class="has-text-black">
+                  دسته بندی
+                </p>
+                <hr class="mt-2 width-70px">
+                <ul>
+                  <div class="has-subcategory" style="width: 181px;">
+                    <div style="width: 140px;">
+                      <li class="pr-3 category-item py-1 border-radius">سیمان</li>
+                    </div>
+                    <div class="subcategory-box has-background-white pt-3 pt-4 px-4">
+                      <a href="#" class="py-5">همه محصولات سیمان ></a>
+                      <p class="has-text-black pt-5 mt-4">
+                        انواع سیمان
+                      </p>
+                      <hr class="mt-2 width-70px">
+                      <ul>
+                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان پرتلند</li>
+                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان رنگی</li>
+                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان نسوز</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">گچ</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">ماسه</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">بتن</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان سفید</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">پودر سنگ</li>
+                  <li class="mt-4 pr-3 category-item py-1 border-radius">ملات</li>
+                </ul>
               </div>
             </div>
-            <NuxtLink class="navbar-item has-text-grey" to="/">
+
+            <NuxtLink class="has-text-grey text-hover-black pr-5" to="/">
               درباره ما
             </NuxtLink>
-            <NuxtLink class="navbar-item has-text-grey" to="/">
+            <NuxtLink class="has-text-grey text-hover-black pr-5" to="/">
               ثبت نام/ ورود
             </NuxtLink>
           </div>
@@ -55,25 +95,61 @@
     </div>
   </div>
 </template>
+
 <style>
-a::before {
-  content: '';
-  display: block;
+.category-box {
   position: absolute;
-  bottom: 3px;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: #585858;
-  transform-origin: left;
-  transform: scale(0, 1);
-  transition: color 0.1s, transform 0.2s ease-out;
+  top: 48px;
+  right: 20px;
+  width: 200px;
+  display: none;
+  z-index: 1000;
 }
 
-a:hover::before,
-a:focus::before {
-  transform-origin: right;
-  transform: scale(1, 1);
+.has-dropdown:hover .category-box {
+  display: block;
+}
 
+.has-subcategory {
+  position: relative;
+}
+
+.subcategory-box {
+  display: none;
+  position: absolute;
+  top: -82px;
+  right: 97%;
+  width: 200px;
+  height: 426px;
+}
+
+.has-subcategory:hover .subcategory-box {
+  display: block;
+}
+
+.width-70px {
+  width: 70px;
+  background-color: black;
+}
+
+.category-item {
+  cursor: pointer;
+}
+
+.category-item:hover {
+  background-color: #d4d4d4;
+  color: black;
+}
+
+.text-hover-black:hover {
+  color: black !important;
+}
+.vl{
+  border-left: 2px solid #a6a6a6;
+  height: 374px;
+  position: absolute;
+  left: 43%;
+  margin-left: -86px;
+  top: 23px;
 }
 </style>
