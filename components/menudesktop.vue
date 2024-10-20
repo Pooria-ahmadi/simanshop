@@ -111,11 +111,11 @@
 .sub-subcategory {
   display: none;
   position: absolute;
-  top: -181px;
+  top: -139px;
   left: -200px;
   width: 200px;
   height: 426px;
-  padding-top: 82px;
+  padding-top: 40px;
 }
 
 .has-submenu:hover .sub-subcategory {
