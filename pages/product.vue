@@ -3,12 +3,12 @@
 
         <div class="columns mx-0 mt-5 is-vcentered">
             <div class="column has-text-centered ">
-
-
-
                 <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlide">
-                    <div class="test is-relative has-background-black p-2 mr-6">
+                    <div v-if="showlike" class="test is-relative has-background-black p-2 mr-6" @click="activelike">
                         <img src="icons8-heart-30.png" alt="like">
+                    </div>
+                    <div v-else class="test is-relative has-background-black p-2 mr-6" @click="activelike">
+                        <img src="icons8-like-20.png" alt="like">
                     </div>
                     <div>
                         <img :src="slide.image" :alt="slide.alt">
@@ -388,9 +388,13 @@ export default {
                 { image: 'siman450.png', alt: ' سیمان 50 کیلویی', },
                 { image: 'siman450.png', alt: ' سیمان 50 کیلویی', },
             ],
+            showlike: true,
         }
     },
     methods: {
+        activelike() {
+            this.showlike = !this.showlike
+        },
         changeSlide(index) {
             this.currentSlide = index;
         },

@@ -51,14 +51,19 @@
     <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
       <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
         :key="index">
-        <NuxtLink to="/product">
+        
         <div class="image-container">
+          <NuxtLink to="/product">
           <img :src="image.src" :alt="image.alt">
-          <div class="corner-like has-background-black p-2">
+        </NuxtLink>
+          <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
             <img src="icons8-heart-30.png" alt="like">
           </div>
+          <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
+            <img src="icons8-like-20.png" alt="like">
+          </div>
         </div>
-      </NuxtLink>
+      
         <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
         <div class="is-flex is-align-items-center is-justify-content-center mt-2">
           <p class="has-text-danger is-size-7">
@@ -198,17 +203,22 @@
     <p class="is-size-4 has-text-black has-text-weight-bold mt-5 mx-4">
       خرید سیمان
     </p>
-    <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto" >
+    <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
       <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
         :key="index">
-        <NuxtLink to="/product">
+        
         <div class="image-container">
+          <NuxtLink to="/product">
           <img :src="image.src" :alt="image.alt">
-          <div class="corner-like has-background-black p-2">
+        </NuxtLink>
+          <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
             <img src="icons8-heart-30.png" alt="like">
           </div>
+          <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
+            <img src="icons8-like-20.png" alt="like">
+          </div>
         </div>
-      </NuxtLink>
+      
         <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
         <div class="is-flex is-align-items-center is-justify-content-center mt-2">
           <p class="has-text-danger is-size-7">
@@ -234,25 +244,6 @@
             -
           </button>
         </div>
-      </div>
-    </div>
-    <div class="columns mt-3 is-vcentered mx-0" data-aos="zoom-out-left">
-      <div class="column is-5 px-5">
-        <h3 class="is-size-5 has-text-black has-text-weight-bold">
-          فروش سیمان در صنعت ساختمانی
-        </h3>
-        <p class="mt-4 has-text-justified line-height-description">
-          فروش سیمان به عنوان یکی از مهمترین محصولات در صنعت ساختمانی استراتژی‌های خاص خود را دارد. این صنعت تحت تأثیر
-          عوامل اقتصادی، ساخت و ساز و تقاضای بازار قرار دارد. استراتژی‌های موفق فروش شامل تعیین قیمت مناسب، بازاریابی
-          قوی، ارائه خدمات پس از فروش و برقراری روابط مؤثر با مشتریان و تأمین‌کنندگان است.
-        </p>
-        <p class="mt-4 has-text-justified line-height-description">
-          فروش سیمان با قیمت مناسب می‌تواند به عنوان یک فرصت عالی برای ساخت و سازهای مختلف مورد استفاده قرار گیرد. این
-          امر می‌تواند به کاهش هزینه‌های ساخت و اجرای پروژه‌ها کمک کند و باعث جذب بیشتر مشتریان شود.
-        </p>
-      </div>
-      <div class="column has-text-centered">
-        <img src="siman2.png" alt="">
       </div>
     </div>
     <p class="mt-4 px-5 has-text-justified line-height-description" data-aos="zoom-out-right">
@@ -286,14 +277,18 @@ export default {
   data() {
     return {
       images: [
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false }
+        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false ,showlike:true },
+        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false ,showlike:true},
+        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false ,showlike:true},
+        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false ,showlike:true}
       ],
+     
     }
   },
   methods: {
+    activelike(index){
+      this.images[index].showlike =!this.images[index].showlike
+    },
     toggleCart(index) {
       this.$set(this.images, index, {
         ...this.images[index],

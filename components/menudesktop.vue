@@ -12,55 +12,31 @@
                 محصولات
               </NuxtLink>
               <div class="category-box has-background-white p-5">
-                <p class="has-text-black">
-                  دسته بندی
-                </p>
+                <p class="has-text-black">دسته بندی</p>
                 <hr class="mt-2 width-70px">
                 <ul>
                   <div class="has-subcategory" style="width: 181px;">
-                    <div style="width: 140px;">
+                    <div style="width: 150px;">
                       <li class="pr-3 category-item py-1 border-radius">سیمان</li>
                     </div>
-                    <div class="subcategory-box has-background-white pt-3 pt-4">
+                    <div class="subcategory-box has-background-white p-4">
+                      <hr class="vl">
                       <a href="#" class="py-5">همه محصولات سیمان ></a>
-                      <p class="has-text-black pt-5 mt-4">
-                        انواع سیمان
-                      </p>
+                      <p class="has-text-black pt-5 mt-4">انواع سیمان</p>
                       <hr class="mt-2 width-70px">
                       <ul>
-                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان پرتلند</li>
-                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان رنگی</li>
-                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان نسوز</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <li class="mt-4 pr-3 category-item py-1 border-radius">گچ</li>
-                  <li class="mt-4 pr-3 category-item py-1 border-radius">ماسه</li>
-                  <li class="mt-4 pr-3 category-item py-1 border-radius">بتن</li>
-                  <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان سفید</li>
-                  <li class="mt-4 pr-3 category-item py-1 border-radius">پودر سنگ</li>
-                  <li class="mt-4 pr-3 category-item py-1 border-radius">ملات</li>
-                </ul>
-              </div>
-              <div class="category-box has-background-white p-5">
-                <div class="vl" style=""></div>
-                <p class="has-text-black">
-                  دسته بندی
-                </p>
-                <hr class="mt-2 width-70px">
-                <ul>
-                  <div class="has-subcategory" style="width: 181px;">
-                    <div style="width: 140px;">
-                      <li class="pr-3 category-item py-1 border-radius">سیمان</li>
-                    </div>
-                    <div class="subcategory-box has-background-white pt-3 pt-4 px-4">
-                      <a href="#" class="py-5">همه محصولات سیمان ></a>
-                      <p class="has-text-black pt-5 mt-4">
-                        انواع سیمان
-                      </p>
-                      <hr class="mt-2 width-70px">
-                      <ul>
-                        <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان پرتلند</li>
+                        <li class="mt-4 pr-3 category-item py-1 border-radius has-submenu">
+                          سیمان پرتلند
+                          <ul class="sub-subcategory has-background-white px-4">
+                            <hr class="vl-2">
+                            <p class="has-text-black pt-5 mt-4">سیمان پرتلند </p>
+                            <hr class="mt-2 width-70px">
+                            <li class="mt-4 pr-3 category-item py-1 border-radius has-text-grey">سیمان پرتلند تیپ 1</li>
+                            <li class="mt-4 pr-3 category-item py-1 border-radius has-text-grey">سیمان پرتلند تیپ 2</li>
+                            <li class="mt-4 pr-3 category-item py-1 border-radius has-text-grey">سیمان پرتلند تیپ 3</li>
+                            <li class="mt-4 pr-3 category-item py-1 border-radius has-text-grey">سیمان پرتلند تیپ 4</li>
+                          </ul>
+                        </li>
                         <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان رنگی</li>
                         <li class="mt-4 pr-3 category-item py-1 border-radius">سیمان نسوز</li>
                       </ul>
@@ -96,6 +72,7 @@
   </div>
 </template>
 
+
 <style>
 .category-box {
   position: absolute;
@@ -103,7 +80,7 @@
   right: 20px;
   width: 200px;
   display: none;
-  z-index: 1000;
+
 }
 
 .has-dropdown:hover .category-box {
@@ -127,6 +104,24 @@
   display: block;
 }
 
+.has-submenu {
+  position: relative;
+}
+
+.sub-subcategory {
+  display: none;
+  position: absolute;
+  top: -181px;
+  left: -200px;
+  width: 200px;
+  height: 426px;
+  padding-top: 82px;
+}
+
+.has-submenu:hover .sub-subcategory {
+  display: block;
+}
+
 .width-70px {
   width: 70px;
   background-color: black;
@@ -144,12 +139,21 @@
 .text-hover-black:hover {
   color: black !important;
 }
-.vl{
-  border-left: 2px solid #a6a6a6;
+
+.vl {
+  border-left: 1px solid #a6a6a6;
   height: 374px;
   position: absolute;
-  left: 43%;
-  margin-left: -86px;
+  right: 43%;
+  margin-right: -86px;
   top: 23px;
+}
+.vl-2{
+  border-left: 1px solid #a6a6a6;
+  height: 304px;
+  position: absolute;
+  right: 45%;
+  margin-right: -86px;
+  top: 90px;
 }
 </style>
