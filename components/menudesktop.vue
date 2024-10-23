@@ -8,7 +8,7 @@
               خانه
             </NuxtLink>
             <div class="is-relative has-dropdown">
-              <NuxtLink class="has-text-grey text-hover-black pr-5 pb-5" to="/">
+              <NuxtLink class="has-text-grey text-hover-black pr-5 pb-5" to="/login">
                 محصولات
               </NuxtLink>
               <div class="category-box has-background-white p-5">
@@ -52,7 +52,7 @@
               </div>
             </div>
 
-            <NuxtLink class="has-text-grey text-hover-black pr-5" to="/">
+            <NuxtLink class="has-text-grey text-hover-black pr-5" to="/aboutus">
               درباره ما
             </NuxtLink>
             <NuxtLink class="has-text-grey text-hover-black pr-5" to="/">

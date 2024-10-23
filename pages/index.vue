@@ -271,9 +271,8 @@
             </button>
           </div>
           <div class="column has-text-centered">
-            <img src="siman3.png" alt="درباره ما">
+            <img src="siman3.png" alt="درباره ما"> 
           </div>
-
         </div>
       </div>
     </div>
@@ -322,11 +321,8 @@ export default {
 <style>
 .img-background-shadow-black {
   background-image: url('/siman3333.png');
-  /* مسیر تصویر */
   background-size: cover;
-  /* تصویر تمام فضای پس‌زمینه را پوشش می‌دهد */
   background-position: center;
-  /* موقعیت تصویر را وسط چین می‌کند */
   padding: 20px;
 
 }
