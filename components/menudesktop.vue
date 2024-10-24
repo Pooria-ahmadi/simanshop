@@ -1,7 +1,7 @@
 <template>
   <div class="is-hidden-tablet-only is-hidden-mobile fixed">
     <div class="box py-0 mb-3">
-      <div class="columns max-width-1160px is-vcentered py-3 mb-2">
+      <div class="columns max-width-1160px is-vcentered py-1 mb-2">
         <div class="column">
           <div class="is-flex">
             <NuxtLink class="has-text-grey text-hover-black" to="/">

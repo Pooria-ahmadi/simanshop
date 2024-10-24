@@ -59,7 +59,7 @@
             پشتیبانی
           </p>
         </a>
-        <a class="has-text-grey-dark" href="/">
+        <a class="has-text-grey-dark" href="/rules">
           <p class="mt-3">
             قوانین و مقررات
           </p>

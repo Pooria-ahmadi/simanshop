@@ -120,25 +120,16 @@
         هوا و در زیر آب به مرور سخت می گردد و دارای مقاومت می شود.
       </p>
 
-      <div class="columns is-vcentered mt-6 has-text-centered-mobile mx-0" data-aos="fade-right" data-aos-offset="300"
-        data-aos-easing="ease-in-sine">
-        <div class="column is-5 px-5">
-          <h2 class="is-size-5 has-text-black has-text-weight-bold mt-5">
-            تیپ سیمان چیست؟
-          </h2>
-          <p class="has-text-justified line-height-description mt-3">
-            انواع سیمان از تیپ ۱ تا تیپ ۵ تقسیم بندی می شوند. بخش مهمی از تفاوت انواع تیپ سیمان با یکدیگر بر اساس زودگیر
-            یا زودسخت بودن و میزان حرارتی است که به هنگام ترکیب آزاد می سازند. تقسیم بندی اصلی سیمان بر اساس نوع مواد
-            اولیه آن به شکل پرتلند و غیرپرتلند خواهد بود. خط تولید سیمان پرتلند و تجهیزات مورد نیاز برای تولید انواع
-            سیمان کاملا یکسان هستند. دلیل عمده ای که باعث تفاوت انواع تیپ سیمان می گردد، نوع مواد اولیه و درجه حرارت
-            کوره در زمان تولید است. برای تولید سیمان پرتلند معمولی دمای کوره در حدود 1500 درجه خواهد بود. در ادامه به
-            معرفی هر چه بهتر انواع سیمان می پردازیم.
-          </p>
-        </div>
-        <div class="column has-text-centered">
-          <img src="/siman5.png" alt="تیپ سیمان چیست">
-        </div>
-      </div>
+      <div class="columns is-vcentered mt-6 has-text-centered-mobile mx-0" v-if="cementInfo" data-aos="fade-right" data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
+    <div class="column is-5 px-5">
+      <h2 class="is-size-5 has-text-black has-text-weight-bold mt-5">{{ cementInfo.title }}</h2>
+      <p class="has-text-justified line-height-description mt-3">{{ cementInfo.description }}</p>
+    </div>
+    <div class="column has-text-centered">
+      <img :src="cementInfo.imageUrl" :alt="cementInfo.title" />
+    </div>
+  </div>
     </div>
     <div class="has-background-grey-lighter full-width-background">
       <div class="max-width-1160px mx-auto">
@@ -288,10 +279,23 @@ export default {
         { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
         { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true }
       ],
-
+      cementInfo: null,
     }
   },
+  mounted() {
+  this.fetchCementInfo();
+},
   methods: {
+    fetchCementInfo() {
+    this.$axios
+    .get('https://fapi.simanshop.com/cement-info')
+      .then(response => {
+        this.cementInfo = response.data;
+      })
+      .catch(error => {
+        console.error('Error fetching cement info:', error);
+      });
+  },
     activelike(index) {
       this.images[index].showlike = !this.images[index].showlike
     },
