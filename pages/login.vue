@@ -3,9 +3,18 @@
         <div class="columns mx-0 is-centered m-0 p-0 ">
             <div class="column is-10 p-0 m-0 ">
                 <div class="image-background-cover ">
-                    <img src="siman1.jpg" alt="صفحه لاگین" class="">
+                    <img src="siman1.jpg" alt="صفحه لاگین" class="image-background-cover-img">
                     <div class="box custom-box border-radius is-align-content-center">
-                        <p class="has-text-white has-text-centered py-3 is-size-4">سیمان شاپ</p>
+                        <div class="has-text-centered">
+                            <NuxtLink to="/">
+                                <img src="logo.png" alt="لوگو">
+                            </NuxtLink>
+                        </div>
+                        <div class="has-text-centered my-4">
+                            <NuxtLink to="/" class=" has-text-danger">
+                            جهت ورود به سایت >
+                        </NuxtLink>
+                        </div> 
                         <label class="label has-text-white py-3">جهت خرید شماره موبایل خود را وارد نمائید</label>
                         <div class="control">
                             <input class="input is-rounded" type="text" placeholder="شماره موبایل خود را وارد کنید">
@@ -31,7 +40,7 @@ export default {
     position: relative;
 }
 
-.image-background-cover img {
+.image-background-cover-img {
     width: 100%;
     border-radius: 0px 15px 15px 15px;
     height: 100vh;
