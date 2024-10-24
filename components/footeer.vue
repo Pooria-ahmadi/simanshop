@@ -61,7 +61,7 @@
         </a>
         <a class="has-text-grey-dark" href="/">
           <p class="mt-3">
-            گواهینامه ها
+            قوانین و مقررات
           </p>
         </a>
       </div>

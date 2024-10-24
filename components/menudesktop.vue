@@ -8,7 +8,7 @@
               خانه
             </NuxtLink>
             <div class="is-relative has-dropdown">
-              <NuxtLink class="has-text-grey text-hover-black pr-5 pb-5" to="/login">
+              <NuxtLink class="has-text-grey text-hover-black pr-5 pb-5" to="/category">
                 محصولات
               </NuxtLink>
               <div class="category-box has-background-white p-5">
@@ -62,7 +62,14 @@
         </div>
         <div class="column">
           <div class="navbar-end is-hidden-mobile">
-            <NuxtLink class="has-text-black" to="/">
+            <NuxtLink to="/login" class="ml-3">
+              <button class="button is-link is-light border-radius-search-input-header">
+                <span class="icon">
+                  <img src="icons8-user-avatar-24.png" alt="login">
+                </span>
+              </button>
+            </NuxtLink>
+            <NuxtLink class="has-text-black is-align-content-center" to="/">
               سیمان شاپ
             </NuxtLink>
           </div>
