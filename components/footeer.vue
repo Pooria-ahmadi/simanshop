@@ -32,11 +32,11 @@
           </p>
         </div>
         <div class="column">
-          <a class="has-text-grey-dark" href="/Contactus">
+          <NuxtLink to="/Contactus" class="has-text-grey-dark">
             <p>
               ارتباط با ما
             </p>
-          </a>
+          </NuxtLink>
           <a class="has-text-grey-dark" href="/">
             <p class="mt-3">
               سوالات متدوال
@@ -47,11 +47,11 @@
               تیم ما
             </p>
           </a>
-          <a class="has-text-grey-dark" href="/">
+          <NuxtLink to="/aboutus" class="has-text-grey-dark">
             <p class="mt-3">
               درباره ما
             </p>
-          </a>
+          </NuxtLink>
         </div>
         <div class="column">
           <a class="has-text-grey-dark" href="/">
@@ -69,11 +69,11 @@
               پشتیبانی
             </p>
           </a>
-          <a class="has-text-grey-dark" href="/rules">
+          <NuxtLink class="has-text-grey-dark" to="/rules">
             <p class="mt-3">
               قوانین و مقررات
             </p>
-          </a>
+          </NuxtLink>
         </div>
         <div class="column is-4">
           <p class="has-text-white is-size-4">

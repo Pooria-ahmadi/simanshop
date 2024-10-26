@@ -37,7 +37,8 @@
                     </p>
                 </div>
             </div>
-            <div class="columns has-text-centered img-background-shadow-aboutus  border-radius-search-input-header py-5 my-5 mx-0">
+            <div
+                class="columns has-text-centered img-background-shadow-aboutus  border-radius-search-input-header py-5 my-5 mx-0">
                 <div class="column is-flex is-flex-direction-column is-align-items-center">
                     <div class="circle-60 p-3 has-background-grey-dark">
                         <img src="icons8-address-33.png" alt="">
@@ -120,6 +121,9 @@
                             <textarea class="textarea" placeholder="پیام خود را بنویسید"></textarea>
                         </div>
                     </div>
+                    <button class="button is-rounded is-black mt-4">
+                        ارسال
+                    </button>
                 </div>
             </div>
         </div>
