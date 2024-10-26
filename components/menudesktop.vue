@@ -12,7 +12,9 @@
                 محصولات
               </NuxtLink>
               <div class="category-box has-background-white p-5">
-                <p class="has-text-black">دسته بندی</p>
+                <NuxtLink to="/category">
+                  <p class="has-text-black">دسته بندی</p>
+                </NuxtLink>
                 <hr class="mt-2 width-70px">
                 <ul>
                   <div class="has-subcategory" style="width: 181px;">
@@ -55,20 +57,13 @@
             <NuxtLink class="has-text-grey text-hover-black pr-5" to="/aboutus">
               درباره ما
             </NuxtLink>
-            <NuxtLink class="has-text-grey text-hover-black pr-5" to="/">
+            <NuxtLink class="has-text-grey text-hover-black pr-5" to="/login">
               ثبت نام/ ورود
             </NuxtLink>
           </div>
         </div>
         <div class="column">
           <div class="navbar-end is-hidden-mobile">
-            <NuxtLink to="/login" class="ml-3">
-              <button class="button is-link is-light border-radius-search-input-header">
-                <span class="icon">
-                  <img src="icons8-user-avatar-24.png" alt="login">
-                </span>
-              </button>
-            </NuxtLink>
             <NuxtLink class="has-text-black is-align-content-center" to="/">
               سیمان شاپ
             </NuxtLink>

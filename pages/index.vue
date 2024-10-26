@@ -27,7 +27,7 @@
             <button class="button is-rounded is-black">
               محصولات
             </button>
-            <button class="button is-rounded has-background-grey-lighter">
+            <button class="button is-rounded has-background-grey-lighter mr-4">
               ارتباط با ما
             </button>
           </div>

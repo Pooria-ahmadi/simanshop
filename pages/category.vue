@@ -1,7 +1,7 @@
 <template>
     <div class="is-relative">
         <div class="max-width-1160px mt-6 py-6">
-            <p class="mt-5">
+            <p class="mt-5 is-size-4 has-text-black">
                 محصولات : گچ
             </p>
             <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
@@ -50,7 +50,7 @@
             </div>
 
 
-            <p class="mt-5">
+            <p class="mt-5 is-size-4 has-text-black">
                 محصولات : سیمان
             </p>
             <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
@@ -98,7 +98,7 @@
                 </div>
             </div>
 
-            <p class="mt-5">
+            <p class="mt-5 is-size-4 has-text-black">
                 محصولات : بتن
             </p>
             <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
@@ -145,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            <p class="mt-5">
+            <p class="mt-5 is-size-4 has-text-black">
                 محصولات : ملات
             </p>
             <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">

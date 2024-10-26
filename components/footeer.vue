@@ -10,8 +10,12 @@
           </p>
         </div>
         <div class="my-4">
-          <img src="black-instagram-logo-3497.png" alt="" >
-          <img src="whatsapp-logo-4453.png" alt="" class="px-4">
+          <a href="https://www.instagram.com/parsiansazeh_co?igsh=MTZ4NXU2dXBlN3lsbQ==" target="_blank">
+            <img src="black-instagram-logo-3497.png" alt="اینستاگرام سیمان شاپ">
+          </a>
+          <a href="https://wa.me/09121472031" class="px-4" target="_blank">
+            <img src="whatsapp-logo-4453.png" alt="واتساپ سیمان شاپ">
+          </a>
           <img src="facebook-logo-108.png" alt="">
         </div>
         <a class="has-text-grey-dark" href="tel:09121472031">
@@ -22,7 +26,7 @@
         </p>
       </div>
       <div class="column">
-        <a class="has-text-grey-dark" href="/">
+        <a class="has-text-grey-dark" href="/Contactus">
           <p>
             ارتباط با ما
           </p>

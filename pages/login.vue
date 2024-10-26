@@ -3,15 +3,15 @@
         <div class="columns mx-0 is-centered m-0 p-0 ">
             <div class="column is-10 p-0 m-0 ">
                 <div class="image-background-cover ">
-                    <img src="siman1.jpg" alt="صفحه لاگین" class="image-background-cover-img">
+                    <img src="siman10.jpg" alt="صفحه لاگین" class="image-background-cover-img">
                     <div class="box custom-box border-radius is-align-content-center">
                         <div class="has-text-centered">
                             <NuxtLink to="/">
-                                <img src="logo.png" alt="لوگو">
+                                <img src="logo2.png" alt="لوگو">
                             </NuxtLink>
                         </div>
                         <div class="has-text-centered my-4">
-                            <NuxtLink to="/" class=" has-text-danger">
+                            <NuxtLink to="/" class="has-text-warning">
                             جهت ورود به سایت >
                         </NuxtLink>
                         </div> 
