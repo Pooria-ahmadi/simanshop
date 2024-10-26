@@ -90,10 +90,11 @@
                     <p class="has-text-black has-text-weight-bold is-size-5 my-5">
                         فرم تماس : برای ما پیام بفرستید
                     </p>
-                    <p>
+                    <p class="py-2">
                         آماده دریافت پیام های شما هستیم و در اسرع وقت به آنها پاسخ خواهیم داد.
-
-                        لطفا پیشنهادات و انتقادات خود را با ما درمیان بگذارید.
+                    </p>
+                    <p class="line-height-description">
+                        لطفا پیشنهادات و انتقادات خود را به info@simanshop.com بفرستید و با ما درمیان بگذارید
                     </p>
                 </div>
                 <div class="column">
