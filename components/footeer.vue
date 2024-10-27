@@ -115,6 +115,7 @@ export default {
   width: 60px;
   border-radius: 50px;
   height: 60px;
+  z-index: 1000;
 }
 
 .phone-image.animate {
