@@ -5,7 +5,8 @@
         <img src="icons8-phone-33.png" alt="پشتیبانی" class="p-3" />
       </a>
     </div>
-      <div class="columns has-text-centered mx-auto is-vcentered bg-image-cover py-6">
+    <div class="bg-container ">
+      <div class="columns mb-0 columns-m-flex-direction has-text-centered mx-auto is-flex is-align-items-center is-justify-content-center content-container py-6">
         <div class="column">
           <div class="is-flex is-align-items-center is-justify-content-center">
             <img src="icon-siman.png" alt="">
@@ -90,6 +91,7 @@
           <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=541280&amp;Code=Hoe3799d6k91VZEjbpExztMe64YN7ttG"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=541280&amp;Code=Hoe3799d6k91VZEjbpExztMe64YN7ttG" alt="" code="Hoe3799d6k91VZEjbpExztMe64YN7ttG" style="cursor:pointer"></a>
         </div>
       </div>
+    </div>
 
   </section>
 </template>
@@ -108,12 +110,33 @@ export default {
 }
 </script>
 <style>
+@media (max-width: 768px) {
+  .columns-m-flex-direction {
+    flex-direction: column; /* Force columns to stack vertically */
+  }
+}
 .bg-image-cover {
   background-image: url('/footer.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+.bg-container {
+  background-image: url('/footer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;  
+  display: flex;   
+  justify-content: center;
+}
+
+.content-container {
+  max-width: 1160px;
+  width: 100%;   
+}
+
+
 .phone-image {
   position: fixed;
   bottom: 20px;

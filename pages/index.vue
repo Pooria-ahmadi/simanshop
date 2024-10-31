@@ -1,42 +1,46 @@
 <template>
   <div class="my-6 py-3 ">
     <div class="max-width-1160px ">
-
-
-      <div class="columns is-vcentered mt-6 has-text-centered-mobile mx-0">
+      <div class="columns is-vcentered py-6 px-4 has-text-centered-mobile mx-0 is-rounded-five mt-5" :class="slide.bgcolor" v-for="(slide, index) in slides" :key="index" v-show="index === currentSlide">
         <div class="column is-5">
           <div>
             <img src="siman10.png" alt="وسایل مورد نیاز برای مصالح ساختمانی">
             <img src="siman9.png" alt="وسایل مورد نیاز برای مصالح ساختمانی">
             <img src="siman8.png" alt="وسایل مورد نیاز برای مصالح ساختمانی">
           </div>
-          <h1 class="font-bold-number is-size-1-desktop is-size-4-mobile has-text-black">
-            تولید و توزیع
+          <h1 :class="slide.color" class="font-bold-number is-size-1-desktop is-size-4-mobile">
+            {{ slide.caption }}
           </h1>
-          <h2 class="font-bold-number is-size-1-desktop is-size-4-mobile has-text-black">
-            انواع مصالح ساختمانی
+          <h2 :class="slide.color" class="font-bold-number is-size-1-desktop is-size-4-mobile">
+            {{slide.subtittle }}
           </h2>
           <p>
-            20 سال سابقه ی حضور و خدمت رسانی
+            {{ slide.subtittle2 }}
           </p>
           <P>
-            به مهندسین گرامی در صنعت ساخت و ساز
+            {{slide.subtittle3 }}
           </P>
-
           <div class="mt-4">
-            <button class="button is-rounded is-black">
+            <button class="button is-rounded ":class="slide.colorbutton2">
               محصولات
             </button>
-            <button class="button is-rounded has-background-grey-lighter mr-4">
-              ارتباط با ما
-            </button>
+            <NuxtLink to="/Contactus">
+              <button class="button is-rounded  mr-4" :class="slide.colorbutton">
+                ارتباط با ما
+              </button>
+            </NuxtLink>
           </div>
         </div>
         <div class="column has-text-centered">
-          <img src="/siman.png" alt=" تولید و توزیع مصالح ساختمانی">
+          <img :src="slide.image2" alt=" تولید و توزیع مصالح ساختمانی">
         </div>
+        <a class="next has-text-white has-text-weight-bold is-size-6" @click="prevSlide">&#10094;</a>
+        <a class="prev has-text-white has-text-weight-bold is-size-6" @click="nextSlide">&#10095;</a>
       </div>
-
+      <div class="has-text-centered mb-4 mx-0">
+      <span v-for="(dot, index) in slides" :key="index" class="dot" :class="{ 'active': index === currentSlide }"
+        @click="changeSlide(index)"></span>
+    </div>
       <h3 class="is-size-4 has-text-weight-bold has-text-black mt-6 has-text-centered-mobile">
         جدیدترین محصولات
       </h3>
@@ -120,16 +124,16 @@
         هوا و در زیر آب به مرور سخت می گردد و دارای مقاومت می شود.
       </p>
 
-      <div class="columns is-vcentered mt-6 has-text-centered-mobile mx-0" v-if="cementInfo" data-aos="fade-right" data-aos-offset="300"
-    data-aos-easing="ease-in-sine">
-    <div class="column is-5 px-5">
-      <h2 class="is-size-5 has-text-black has-text-weight-bold mt-5">{{ cementInfo.title }}</h2>
-      <p class="has-text-justified line-height-description mt-3">{{ cementInfo.description }}</p>
-    </div>
-    <div class="column has-text-centered">
-      <img :src="cementInfo.imageUrl" :alt="cementInfo.title" />
-    </div>
-  </div>
+      <div class="columns is-vcentered mt-6 has-text-centered-mobile mx-0" v-if="cementInfo" data-aos="fade-right"
+        data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <div class="column is-5 px-5">
+          <h2 class="is-size-5 has-text-black has-text-weight-bold mt-5">{{ cementInfo.title }}</h2>
+          <p class="has-text-justified line-height-description mt-3">{{ cementInfo.description }}</p>
+        </div>
+        <div class="column has-text-centered">
+          <img :src="cementInfo.imageUrl" :alt="cementInfo.title" />
+        </div>
+      </div>
     </div>
     <div class="has-background-grey-lighter full-width-background">
       <div class="max-width-1160px mx-auto">
@@ -347,9 +351,11 @@
               <img src="arrow-left.png" class="mr-3">
             </button>
           </div>
-          <div class="column has-text-centered">
-            <img src="siman3.png" alt="درباره ما"> 
+          <NuxtLink to="/aboutus">
+            <div class="column has-text-centered">
+            <img src="siman3.png" alt="درباره ما">
           </div>
+          </NuxtLink>
         </div>
       </div>
     </div>
@@ -364,6 +370,11 @@ export default {
   },
   data() {
     return {
+      currentSlide: 0,
+      slides: [
+        {bgcolor:"has-background-white", image2:'/siman.png', caption: 'تولید و توزیع', subtittle: 'انواع مصالح ساختمانی', subtittle2: '20 سال سابقه ی حضور و خدمت رسانی', subtittle3: 'به مهندسین گرامی در صنعت ساخت و ساز', color: 'has-text-black', colorbutton: 'has-background-grey-lighter',colorbutton2: 'is-black' },
+        {bgcolor:"has-background-black", image2:'/siman.png', caption: ' تولید و توزیع', subtittle: 'انواع مصالح ساختمانی', subtittle2: '20 سال سابقه ی حضور و خدمت رسانی', subtittle3: 'به مهندسین گرامی در صنعت ساخت و ساز', color: 'has-text-white', colorbutton: 'has-background-grey-lighter',colorbutton2: '' },
+      ],
       images: [
         { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
         { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
@@ -374,19 +385,33 @@ export default {
     }
   },
   mounted() {
-  this.fetchCementInfo();
-},
-  methods: {
-    fetchCementInfo() {
-    this.$axios
-    .get('https://fapi.simanshop.com/cement-info')
-      .then(response => {
-        this.cementInfo = response.data;
-      })
-      .catch(error => {
-        console.error('Error fetching cement info:', error);
-      });
+    this.fetchCementInfo();
   },
+  methods: {
+    showSlides() {
+      setInterval(() => {
+        this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+      }, 5000);
+    },
+    changeSlide(index) {
+      this.currentSlide = index;
+    },
+    prevSlide() {
+      this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+    },
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+    },
+    fetchCementInfo() {
+      this.$axios
+        .get('https://fapi.simanshop.com/cement-info')
+        .then(response => {
+          this.cementInfo = response.data;
+        })
+        .catch(error => {
+          console.error('Error fetching cement info:', error);
+        });
+    },
     activelike(index) {
       this.images[index].showlike = !this.images[index].showlike
     },
@@ -414,6 +439,22 @@ export default {
 }
 </script>
 <style>
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -45px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
 .img-background-shadow-black {
   background-image: url('/siman3333.png');
   background-size: cover;
@@ -425,7 +466,7 @@ export default {
   overflow-x: auto;
 }
 
-.backgrond-color-C6C6C691{
+.backgrond-color-C6C6C691 {
   background-color: #C6C6C691;
 }
 </style>
