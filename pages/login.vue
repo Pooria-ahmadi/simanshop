@@ -11,7 +11,7 @@
                             </NuxtLink>
                         </div>
                         <div class="has-text-centered my-4">
-                            <NuxtLink to="/" class="has-text-warning">
+                            <NuxtLink to="/" class="has-background-black p-2 is-rounded-five has-text-white-ter">
                             جهت ورود به سایت >
                         </NuxtLink>
                         </div> 
@@ -20,7 +20,7 @@
                             <input class="input is-rounded" type="text" placeholder="شماره موبایل خود را وارد کنید">
                         </div>
                         <div class="control mt-4 has-text-centered">
-                            <button class="button is-primary is-rounded">ارسال</button>
+                            <button class="button is-rounded is-black">ارسال</button>
                         </div>
                     </div>
                 </div>

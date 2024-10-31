@@ -62,9 +62,12 @@
             </NuxtLink>
           </div>
         </div>
-        <div class="column">
+        <div class="column py-0">
           <div class="navbar-end is-hidden-mobile">
-            <NuxtLink class="has-text-black is-align-content-center" to="/">
+            <NuxtLink class=" is-align-content-center" to="/">
+              <img src="logo.png" alt="" style="width: 40px;">
+            </NuxtLink>
+            <NuxtLink class="has-text-black is-align-content-center pr-2" to="/">
               سیمان شاپ
             </NuxtLink>
           </div>

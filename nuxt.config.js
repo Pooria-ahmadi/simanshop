@@ -12,13 +12,13 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'فروشگاه دلیان عرضه کننده پنیر لیقوان درجه' },
-      { hid: 'og:description', name: 'og:description',property: 'og:description', content: 'فروشگاه دلیان عرضه کننده پنیر لیقوان درجه' },
+      { hid: 'description', name: 'description', content: ' سیمان شاپ تولید و توزیع کننده مصالح ساختمانی ' },
+      { hid: 'og:description', name: 'og:description',property: 'og:description', content: 'یمان شاپ تولید و توزیع کننده مصالح ساختمانی ' },
       { name: 'format-detection', content: 'telephone=no' },
       { hid: 'robots', name: 'robots', content: 'noindex' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, 
+      { rel: 'icon', type: 'image/x-icon', href: '/logo.ico' }, 
     ]
   },
 
