@@ -199,8 +199,9 @@
       </div>
     </div>
     <div class="max-width-1160px ">
-      <p class="is-size-4 has-text-black has-text-weight-bold mt-5 mx-4">
-        خرید سیمان
+      <div class="my-6">
+      <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-text-black" >
+         سیمان
       </p>
       <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
         <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
@@ -243,8 +244,10 @@
           </div>
         </div>
       </div>
-      <p class="is-size-4 has-text-black has-text-weight-bold mt-5 mx-4">
-        خرید گچ
+    </div>
+      <div class="my-6 py-3">
+      <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-background-grey-lighter has-text-grey-darker" >
+         گچ
       </p>
       <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
         <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
@@ -287,8 +290,10 @@
           </div>
         </div>
       </div>
-      <p class="is-size-4 has-text-black has-text-weight-bold mt-5 mx-4">
-        خرید بلوک
+    </div>
+    <div class="my-6">
+      <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-text-black" >
+         بلوک
       </p>
       <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
         <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
@@ -331,6 +336,7 @@
           </div>
         </div>
       </div>
+    </div>
       <p class="mt-4 px-5 has-text-justified line-height-description" data-aos="zoom-out-right">
         شرکت‌های فروش سیمان عموماً در تولید، بسته‌بندی و عرضه سیمان به بازارها مشغول هستند. آن‌ها معمولاً نقش اساسی در
         صنعت ساخت و ساز دارند و تأمین مواد اولیه برای پروژه‌های عظیم ساختمانی را بر عهده دارند. این شرکت‌ها باید با
