@@ -1,58 +1,36 @@
 <template>
-    <div class="max-width-1160px ">
-        <div class="columns mx-0 is-centered m-0 p-0 ">
-            <div class="column is-10 p-0 m-0 ">
-                <div class="image-background-cover ">
-                    <img src="siman10.jpg" alt="صفحه لاگین" class="image-background-cover-img">
-                    <div class="box custom-box border-radius is-align-content-center">
-                        <div class="has-text-centered">
-                            <NuxtLink to="/">
-                                <img src="logo2.png" alt="لوگو">
-                            </NuxtLink>
-                        </div>
-                        <div class="has-text-centered my-4">
-                            <NuxtLink to="/" class="has-background-black p-2 is-rounded-five has-text-white-ter">
-                            جهت ورود به سایت >
-                        </NuxtLink>
-                        </div> 
-                        <label class="label has-text-white py-3">جهت خرید شماره موبایل خود را وارد نمائید</label>
-                        <div class="control">
-                            <input class="input is-rounded" type="text" placeholder="شماره موبایل خود را وارد کنید">
-                        </div>
-                        <div class="control mt-4 has-text-centered">
-                            <button class="button is-rounded is-black">ارسال</button>
+    <div style="overflow: hidden;">
+        <div class="max-width-1160px " style="margin-top: 80px;">
+            <div class="columns is-centered mx-0 is-vcentered">
+                <div class="column is-half has-background-white mx-auto py-0 my-0">
+                    <div class="columns is-centered">
+                        <div class="column box is-8-desktop is-10-mobile mx-auto border-radius-search-input-header">
+                            <p class="is-size-4 has-text-black my-4">
+                                ورود | ثبت نام
+                            </p>
+                            <p class="has-text-black is-size-6">جهت ورود شماره موبایل خود را وارد کنید</p>
+                            <div class="control mt-6">
+                                <label class="label has-text-black "> شماره موبایل </label>
+                                <input class="input border-radius" type="text" placeholder="*شماره موبایل" />
+                            </div>
+                            <button class="button is-black width-100 border-radius mt-6 mb-5">ارسال</button>
                         </div>
                     </div>
+                </div>
+                <div class="column has-text-centered p-0 is-hidden-mobile">
+                    <img src="login.png" alt="صفحه ورود سیمان شاپ" style="height: 570px;">
                 </div>
             </div>
         </div>
     </div>
 </template>
-
-<script>
-export default {
-    layout:'login'
-}
-</script>
-
 <style>
-.image-background-cover {
-    position: relative;
-}
-
-.image-background-cover-img {
+.width-100{
     width: 100%;
-    border-radius: 0px 15px 15px 15px;
-    height: 100vh;
-    object-fit: cover;
-}
-
-.custom-box {
-    background-color: rgba(17, 17, 17, 0.82);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 375px;
 }
 </style>
+<script>
+export default {
+    layout: 'login'
+}
+</script>

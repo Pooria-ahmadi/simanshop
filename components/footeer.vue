@@ -5,8 +5,9 @@
         <img src="icons8-phone-33.png" alt="پشتیبانی" class="p-3" />
       </a>
     </div>
-    <div class="bg-container ">
-      <div class="columns mb-0 columns-m-flex-direction has-text-centered mx-auto is-flex is-align-items-center is-justify-content-center content-container py-6">
+    <div class="bg-container is-flex is-justify-content-center">
+      <div
+        class="columns mb-0 columns-m-flex-direction has-text-centered mx-auto is-flex is-align-items-center is-justify-content-center content-container py-6">
         <div class="column">
           <div class="is-flex is-align-items-center is-justify-content-center">
             <img src="icon-siman.png" alt="">
@@ -78,21 +79,24 @@
             همراه شما هستیم تا پایان کار!
           </p>
           <p class="mt-5 has-text-grey">
-           خیابان دماوند - روبروی ترمینال شرق - نبش خیابان باقر آذری - پلاک 283 - طبقه اول - واحد 1
+            خیابان دماوند - روبروی ترمینال شرق - نبش خیابان باقر آذری - پلاک 283 - طبقه اول - واحد 1
           </p>
           <p class="my-2 has-text-grey">
             ۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم
           </p>
           <p class="has-text-grey">
-            © تمام حقوق برای siamnshop.ir محفوظ است
+            © تمام حقوق برای simanshop.ir محفوظ است
           </p>
         </div>
         <div class="column">
-          <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=541280&amp;Code=Hoe3799d6k91VZEjbpExztMe64YN7ttG"><img referrerpolicy="origin" src="https://trustseal.enamad.ir/logo.aspx?id=541280&amp;Code=Hoe3799d6k91VZEjbpExztMe64YN7ttG" alt="" code="Hoe3799d6k91VZEjbpExztMe64YN7ttG" style="cursor:pointer"></a>
+          <a referrerpolicy="origin" target="_blank"
+            href="https://trustseal.enamad.ir/?id=541280&amp;Code=Hoe3799d6k91VZEjbpExztMe64YN7ttG"><img
+              referrerpolicy="origin"
+              src="https://trustseal.enamad.ir/logo.aspx?id=541280&amp;Code=Hoe3799d6k91VZEjbpExztMe64YN7ttG" alt=""
+              code="Hoe3799d6k91VZEjbpExztMe64YN7ttG" style="cursor:pointer"></a>
         </div>
       </div>
     </div>
-
   </section>
 </template>
 <script>
@@ -112,30 +116,21 @@ export default {
 <style>
 @media (max-width: 768px) {
   .columns-m-flex-direction {
-    flex-direction: column; /* Force columns to stack vertically */
+    flex-direction: column;
   }
 }
-.bg-image-cover {
-  background-image: url('/footer.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 .bg-container {
   background-image: url('/footer.png');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  width: 100%;  
-  display: flex;   
-  justify-content: center;
+  width: 100%;
 }
 
 .content-container {
   max-width: 1160px;
-  width: 100%;   
+  width: 100%;
 }
-
 
 .phone-image {
   position: fixed;

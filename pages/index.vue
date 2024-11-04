@@ -34,8 +34,8 @@
         <div class="column has-text-centered">
           <img :src="slide.image2" alt=" تولید و توزیع مصالح ساختمانی">
         </div>
-        <a class="next has-text-white has-text-weight-bold is-size-6" @click="prevSlide">&#10094;</a>
-        <a class="prev has-text-white has-text-weight-bold is-size-6" @click="nextSlide">&#10095;</a>
+        <a class="next has-text-weight-bold is-size-1-desktop is-size-4-mobile has-text-grey-darker" @click="prevSlide">&#10094;</a>
+        <a class="prev has-text-weight-bold is-size-1-desktop is-size-4-mobile has-text-grey-darker" @click="nextSlide">&#10095;</a>
       </div>
       <div class="has-text-centered mb-4 mx-0">
       <span v-for="(dot, index) in slides" :key="index" class="dot" :class="{ 'active': index === currentSlide }"
@@ -443,9 +443,9 @@ export default {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 335px;
   width: auto;
-  padding: 16px;
+  padding: 35px;
   margin-top: -45px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;

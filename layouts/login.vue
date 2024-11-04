@@ -1,5 +1,7 @@
 <template>
     <div>
+        <menudesktop/>
+        <menumobile/>
         <nuxt />
     </div>
 </template>

@@ -16,7 +16,8 @@
                 </div>
             </div>
             <div class="columns mx-0 is-centered my-5">
-                <div class="column is-8 line-height-description has-text-justified">
+                <div class="column line-height-description has-text-justified" data-aos="fade-left"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <p>
                         پارسیان سازه حاصل ایده و تفکر بنیان‌گذارانی با تحصیلات مهندسی، مدیریت کسب و کار و تجربه در زمینه
                         پیمانکاری،
@@ -35,6 +36,9 @@
                         خدمت‌رسانی؛ خریداران، فروشندگان، تولیدکنندگان و سایر دست اندرکاران حوزه صنعت ساختمان در کشور می
                         باشد.
                     </p>
+                </div>
+                <div class="column" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <img src="siman11.jpg" alt="">
                 </div>
             </div>
             <div class="columns is-vcentered is-mobile mx-0">
