@@ -9,12 +9,14 @@
             <img src="siman9.png" alt="وسایل مورد نیاز برای مصالح ساختمانی">
             <img src="siman8.png" alt="وسایل مورد نیاز برای مصالح ساختمانی">
           </div>
-          <h1 :class="slide.color" class="font-bold-number is-size-1-desktop is-size-4-mobile">
-            {{ slide.caption }}
+          <h1>
+            <span :class="slide.color + ' is-block'" class="font-bold-number is-size-1-desktop is-size-4-mobile">
+              {{ slide.caption }}
+            </span>
+            <span :class="slide.color + ' is-block'" class="font-bold-number is-size-1-desktop is-size-4-mobile">
+              {{ slide.subtittle }}
+            </span>
           </h1>
-          <h2 :class="slide.color" class="font-bold-number is-size-1-desktop is-size-4-mobile">
-            {{ slide.subtittle }}
-          </h2>
           <p>
             {{ slide.subtittle2 }}
           </p>
@@ -249,8 +251,7 @@
         </div>
       </div>
       <div class="my-6 py-3 has-background-grey-lighter border-radius">
-        <p
-          class="is-size-4 has-text-weight-bold pr-4 has-text-grey-darker">
+        <p class="is-size-4 has-text-weight-bold pr-4 has-text-grey-darker">
           گچ
         </p>
         <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
