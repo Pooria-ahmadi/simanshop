@@ -1,7 +1,8 @@
 <template>
   <div class="my-6 py-3 ">
     <div class="max-width-1160px ">
-      <div class="columns is-vcentered py-6 px-4 has-text-centered-mobile mx-0 is-rounded-five mt-5" :class="slide.bgcolor" v-for="(slide, index) in slides" :key="index" v-show="index === currentSlide">
+      <div class="columns is-vcentered py-6 px-4 has-text-centered-mobile mx-0 is-rounded-five mt-5"
+        :class="slide.bgcolor" v-for="(slide, index) in slides" :key="index" v-show="index === currentSlide">
         <div class="column is-5">
           <div>
             <img src="siman10.png" alt="وسایل مورد نیاز برای مصالح ساختمانی">
@@ -12,16 +13,16 @@
             {{ slide.caption }}
           </h1>
           <h2 :class="slide.color" class="font-bold-number is-size-1-desktop is-size-4-mobile">
-            {{slide.subtittle }}
+            {{ slide.subtittle }}
           </h2>
           <p>
             {{ slide.subtittle2 }}
           </p>
           <P>
-            {{slide.subtittle3 }}
+            {{ slide.subtittle3 }}
           </P>
           <div class="mt-4">
-            <button class="button is-rounded ":class="slide.colorbutton2">
+            <button class="button is-rounded " :class="slide.colorbutton2">
               محصولات
             </button>
             <NuxtLink to="/Contactus">
@@ -34,13 +35,15 @@
         <div class="column has-text-centered">
           <img :src="slide.image2" alt=" تولید و توزیع مصالح ساختمانی">
         </div>
-        <a class="next has-text-weight-bold is-size-1-desktop is-size-4-mobile has-text-grey-darker" @click="prevSlide">&#10094;</a>
-        <a class="prev has-text-weight-bold is-size-1-desktop is-size-4-mobile has-text-grey-darker" @click="nextSlide">&#10095;</a>
+        <a class="next has-text-weight-bold is-size-1-desktop is-size-4-mobile has-text-grey-darker"
+          @click="prevSlide">&#10094;</a>
+        <a class="prev has-text-weight-bold is-size-1-desktop is-size-4-mobile has-text-grey-darker"
+          @click="nextSlide">&#10095;</a>
       </div>
       <div class="has-text-centered mb-4 mx-0">
-      <span v-for="(dot, index) in slides" :key="index" class="dot" :class="{ 'active': index === currentSlide }"
-        @click="changeSlide(index)"></span>
-    </div>
+        <span v-for="(dot, index) in slides" :key="index" class="dot" :class="{ 'active': index === currentSlide }"
+          @click="changeSlide(index)"></span>
+      </div>
       <h3 class="is-size-4 has-text-weight-bold has-text-black mt-6 has-text-centered-mobile">
         جدیدترین محصولات
       </h3>
@@ -79,7 +82,7 @@
             <p class="mx-2">
               {{ image.price }}
             </p>
-            <img src="image 1.png" alt="مبلغ">
+            <img src="image 1.jpg" alt="مبلغ">
           </div>
           <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
             120,000
@@ -111,7 +114,7 @@
           </p>
         </div>
         <div class="column has-text-centered">
-          <img src="AdobeStock_Preview 1.png" alt="سیمان چیست">
+          <img src="AdobeStock_Preview 1.jpg" alt="سیمان چیست">
         </div>
       </div>
       <p class="has-text-justified line-height-description px-5" data-aos="zoom-out">
@@ -200,151 +203,152 @@
     </div>
     <div class="max-width-1160px ">
       <div class="my-6">
-      <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-text-black" >
-         سیمان
-      </p>
-      <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
-        <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
-          :key="index">
-          <div class="image-container">
-            <NuxtLink to="/product">
-              <img :src="image.src" :alt="image.alt">
-            </NuxtLink>
-            <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
-              <img src="icons8-heart-30.png" alt="like">
+        <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-text-black">
+          سیمان
+        </p>
+        <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
+          <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
+            :key="index">
+            <div class="image-container">
+              <NuxtLink to="/product">
+                <img :src="image.src" :alt="image.alt">
+              </NuxtLink>
+              <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
+                <img src="icons8-heart-30.png" alt="like">
+              </div>
+              <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
+                <img src="icons8-like-20.png" alt="like">
+              </div>
             </div>
-            <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
-              <img src="icons8-like-20.png" alt="like">
+            <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
+            <div class="is-flex is-align-items-center is-justify-content-center mt-2">
+              <p class="has-text-danger is-size-7">
+                3%
+              </p>
+              <p class="mx-2">
+                {{ image.price }}
+              </p>
+              <img src="image 1.jpg" alt="مبلغ">
             </div>
-          </div>
-          <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
-          <div class="is-flex is-align-items-center is-justify-content-center mt-2">
-            <p class="has-text-danger is-size-7">
-              3%
+            <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
+              120,000
             </p>
-            <p class="mx-2">
-              {{ image.price }}
-            </p>
-            <img src="image 1.png" alt="مبلغ">
-          </div>
-          <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
-            120,000
-          </p>
-          <button v-if="!image.showCart" class="button is-black mt-4" @click="toggleCart(index)">
-            افزودن به سبد خرید
-          </button>
-          <div v-else class="is-flex is-align-items-center is-justify-content-center mt-3">
-            <button class="px-4 py-2 button is-black" @click="increment(index)">
-              +
+            <button v-if="!image.showCart" class="button is-black mt-4" @click="toggleCart(index)">
+              افزودن به سبد خرید
             </button>
-            <input type="text" class="mx-2 has-text-centered" style="width: 35px;" :value="image.number">
-            <button class="px-4 py-2 button is-light" @click="decrement(index)">
-              -
-            </button>
+            <div v-else class="is-flex is-align-items-center is-justify-content-center mt-3">
+              <button class="px-4 py-2 button is-black" @click="increment(index)">
+                +
+              </button>
+              <input type="text" class="mx-2 has-text-centered" style="width: 35px;" :value="image.number">
+              <button class="px-4 py-2 button is-light" @click="decrement(index)">
+                -
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-      <div class="my-6 py-3">
-      <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-background-grey-lighter has-text-grey-darker" >
-         گچ
-      </p>
-      <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
-        <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
-          :key="index">
-          <div class="image-container">
-            <NuxtLink to="/product">
-              <img :src="image.src" :alt="image.alt">
-            </NuxtLink>
-            <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
-              <img src="icons8-heart-30.png" alt="like">
+      <div class="my-6 py-3 has-background-grey-lighter border-radius">
+        <p
+          class="is-size-4 has-text-weight-bold pr-4 has-text-grey-darker">
+          گچ
+        </p>
+        <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
+          <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
+            :key="index">
+            <div class="image-container">
+              <NuxtLink to="/product">
+                <img :src="image.src" :alt="image.alt">
+              </NuxtLink>
+              <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
+                <img src="icons8-heart-30.png" alt="like">
+              </div>
+              <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
+                <img src="icons8-like-20.png" alt="like">
+              </div>
             </div>
-            <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
-              <img src="icons8-like-20.png" alt="like">
+            <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
+            <div class="is-flex is-align-items-center is-justify-content-center mt-2">
+              <p class="has-text-danger is-size-7">
+                3%
+              </p>
+              <p class="mx-2">
+                {{ image.price }}
+              </p>
+              <img src="image 1.jpg" alt="مبلغ">
             </div>
-          </div>
-          <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
-          <div class="is-flex is-align-items-center is-justify-content-center mt-2">
-            <p class="has-text-danger is-size-7">
-              3%
+            <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
+              120,000
             </p>
-            <p class="mx-2">
-              {{ image.price }}
-            </p>
-            <img src="image 1.png" alt="مبلغ">
-          </div>
-          <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
-            120,000
-          </p>
-          <button v-if="!image.showCart" class="button is-black mt-4" @click="toggleCart(index)">
-            افزودن به سبد خرید
-          </button>
-          <div v-else class="is-flex is-align-items-center is-justify-content-center mt-3">
-            <button class="px-4 py-2 button is-black" @click="increment(index)">
-              +
+            <button v-if="!image.showCart" class="button is-black mt-4" @click="toggleCart(index)">
+              افزودن به سبد خرید
             </button>
-            <input type="text" class="mx-2 has-text-centered" style="width: 35px;" :value="image.number">
-            <button class="px-4 py-2 button is-light" @click="decrement(index)">
-              -
-            </button>
+            <div v-else class="is-flex is-align-items-center is-justify-content-center mt-3">
+              <button class="px-4 py-2 button is-black" @click="increment(index)">
+                +
+              </button>
+              <input type="text" class="mx-2 has-text-centered" style="width: 35px;" :value="image.number">
+              <button class="px-4 py-2 button is-light" @click="decrement(index)">
+                -
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="my-6">
-      <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-text-black" >
-         بلوک
-      </p>
-      <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
-        <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
-          :key="index">
-          <div class="image-container">
-            <NuxtLink to="/product">
-              <img :src="image.src" :alt="image.alt">
-            </NuxtLink>
-            <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
-              <img src="icons8-heart-30.png" alt="like">
+      <div class="my-6">
+        <p class="is-size-4 has-text-weight-bold  mx-4 pr-4 py-1 border-radius has-text-black">
+          بلوک
+        </p>
+        <div class="columns mx-0 mt-5 is-flex-mobile overflow-x-auto">
+          <div class="column has-text-centered is-one-quarter is-three-fifths-mobile" v-for="(image, index) in images"
+            :key="index">
+            <div class="image-container">
+              <NuxtLink to="/product">
+                <img :src="image.src" :alt="image.alt">
+              </NuxtLink>
+              <div v-if="image.showlike" class="corner-like has-background-black p-2" @click="activelike(index)">
+                <img src="icons8-heart-30.png" alt="like">
+              </div>
+              <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
+                <img src="icons8-like-20.png" alt="like">
+              </div>
             </div>
-            <div v-else class="corner-like has-background-black p-2" @click="activelike(index)">
-              <img src="icons8-like-20.png" alt="like">
+            <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
+            <div class="is-flex is-align-items-center is-justify-content-center mt-2">
+              <p class="has-text-danger is-size-7">
+                3%
+              </p>
+              <p class="mx-2">
+                {{ image.price }}
+              </p>
+              <img src="image 1.jpg" alt="مبلغ">
             </div>
-          </div>
-          <p class="has-text-centered mt-4 has-text-black">{{ image.caption }}</p>
-          <div class="is-flex is-align-items-center is-justify-content-center mt-2">
-            <p class="has-text-danger is-size-7">
-              3%
+            <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
+              120,000
             </p>
-            <p class="mx-2">
-              {{ image.price }}
-            </p>
-            <img src="image 1.png" alt="مبلغ">
-          </div>
-          <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
-            120,000
-          </p>
-          <button v-if="!image.showCart" class="button is-black mt-4" @click="toggleCart(index)">
-            افزودن به سبد خرید
-          </button>
-          <div v-else class="is-flex is-align-items-center is-justify-content-center mt-3">
-            <button class="px-4 py-2 button is-black" @click="increment(index)">
-              +
+            <button v-if="!image.showCart" class="button is-black mt-4" @click="toggleCart(index)">
+              افزودن به سبد خرید
             </button>
-            <input type="text" class="mx-2 has-text-centered" style="width: 35px;" :value="image.number">
-            <button class="px-4 py-2 button is-light" @click="decrement(index)">
-              -
-            </button>
+            <div v-else class="is-flex is-align-items-center is-justify-content-center mt-3">
+              <button class="px-4 py-2 button is-black" @click="increment(index)">
+                +
+              </button>
+              <input type="text" class="mx-2 has-text-centered" style="width: 35px;" :value="image.number">
+              <button class="px-4 py-2 button is-light" @click="decrement(index)">
+                -
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
       <p class="mt-4 px-5 has-text-justified line-height-description" data-aos="zoom-out-right">
         شرکت‌های فروش سیمان عموماً در تولید، بسته‌بندی و عرضه سیمان به بازارها مشغول هستند. آن‌ها معمولاً نقش اساسی در
         صنعت ساخت و ساز دارند و تأمین مواد اولیه برای پروژه‌های عظیم ساختمانی را بر عهده دارند. این شرکت‌ها باید با
         استانداردهای صنعتی، قوانین محیط زیست و نظارت‌های دولتی رعایت کنند.
       </p>
       <div class="is-relative">
-        <div class="columns p-4 is-vcentered mx-0 img-background-shadow-black  border-radius-search-input-header mt-5">
-          <div class="column is-5 px-5">
+        <div class="columns p-5 is-vcentered mx-0 img-background-shadow-black  border-radius-search-input-header mt-5">
+          <div class="column px-5">
             <p class="mt-4 has-text-justified line-height-description has-text-white has-text-weight-bold">
               شرکت ما یکی از پیشگامان در صنعت فروش سیمان است. با بیش از دو دهه تجربه، ما به عنوان یک منبع قابل اعتماد
               برای
@@ -352,16 +356,16 @@
               استانداردهای
               بالا و رضایت‌مندی مشتریان، در پروژه‌های ساختمانی و عمرانی نقش به‌سزای خود را ایفا کنیم.
             </p>
-            <button class="mt-4 button is-rounded has-text-white backgrond-color-C6C6C691">
-              درباره ما
-              <img src="arrow-left.png" class="mr-3">
-            </button>
+            <NuxtLink to="/aboutus">
+              <button class="mt-4 button is-rounded has-text-white backgrond-color-C6C6C691">
+                درباره ما
+                <img src="arrow-left.png" class="mr-3">
+              </button>
+            </NuxtLink>
           </div>
-          <NuxtLink to="/aboutus">
-            <div class="column has-text-centered">
-            <img src="siman3.png" alt="درباره ما">
+          <div class="column has-text-centered">
+            <img class="border-radius" src="aboutwe2.jpg" alt="درباره ما">
           </div>
-          </NuxtLink>
         </div>
       </div>
     </div>
@@ -378,14 +382,14 @@ export default {
     return {
       currentSlide: 0,
       slides: [
-        {bgcolor:"has-background-white", image2:'/siman.png', caption: 'تولید و توزیع', subtittle: 'انواع مصالح ساختمانی', subtittle2: '20 سال سابقه ی حضور و خدمت رسانی', subtittle3: 'به مهندسین گرامی در صنعت ساخت و ساز', color: 'has-text-black', colorbutton: 'has-background-grey-lighter',colorbutton2: 'is-black' },
-        {bgcolor:"has-background-black", image2:'/siman.png', caption: ' تولید و توزیع', subtittle: 'انواع مصالح ساختمانی', subtittle2: '20 سال سابقه ی حضور و خدمت رسانی', subtittle3: 'به مهندسین گرامی در صنعت ساخت و ساز', color: 'has-text-white', colorbutton: 'has-background-grey-lighter',colorbutton2: '' },
+        { bgcolor: "has-background-white", image2: '/siman.png', caption: 'تولید و توزیع', subtittle: 'انواع مصالح ساختمانی', subtittle2: '20 سال سابقه ی حضور و خدمت رسانی', subtittle3: 'به مهندسین گرامی در صنعت ساخت و ساز', color: 'has-text-black', colorbutton: 'has-background-grey-lighter', colorbutton2: 'is-black' },
+        { bgcolor: "has-background-black", image2: '/siman.png', caption: ' گچ در صنعت ساخت و ساز', subtittle: ' مزایای استفاده از گچ', subtittle2: 'از ویژگی‌های گچ می‌توان به سبک بودن، قابلیت انعطاف‌پذیری بالا، و مقاومت در برابر آتش اشاره کرد', subtittle3: 'به مهندسین گرامی در صنعت ساخت و ساز', color: 'has-text-white', colorbutton: 'has-background-grey-lighter', colorbutton2: '' },
       ],
       images: [
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
-        { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true }
+        { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
+        { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
+        { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true },
+        { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false, showlike: true }
       ],
       cementInfo: null,
     }
@@ -461,6 +465,7 @@ export default {
   left: 0;
   border-radius: 3px 0 0 3px;
 }
+
 .img-background-shadow-black {
   background-image: url('/siman3333.png');
   background-size: cover;

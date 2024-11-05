@@ -46,7 +46,7 @@
                             <p class="ml-2 is-size-4 has-text-white">
                                 150،000
                             </p>
-                            <img src="image 1.png" alt="مبلغ">
+                            <img src="image 1.jpg" alt="مبلغ">
                         </div>
                         <div class="is-flex is-align-items-center mt-5">
                             <p class="ml-4 has-text-grey-lighter">
@@ -140,7 +140,7 @@
                             <p class="ml-2 is-size-4 has-text-black">
                                 150،000
                             </p>
-                            <img src="image 1.png" alt="مبلغ">
+                            <img src="image 1.jpg" alt="مبلغ">
                         </div>
                         <div class="is-flex is-align-items-center mt-5">
                             <div class="is-relative is-inline-block">
@@ -350,7 +350,7 @@
                     <p class="mx-2">
                         {{ image.price }}
                     </p>
-                    <img src="image 1.png" alt="مبلغ">
+                    <img src="image 1.jpg" alt="مبلغ">
                 </div>
                 <p class="has-text-grey-light text-decoration-line-grey has-text-centered">
                     120,000
@@ -376,17 +376,17 @@ export default {
     data() {
         return {
             images: [
-                { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
-                { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
-                { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
-                { src: 'siman4.png', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false }
+                { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
+                { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
+                { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false },
+                { src: 'siman4.jpg', caption: 'سیمان 50 کیلویی', price: '115,000', alt: 'سیمان 50 کیلویی', number: 0, showCart: false }
             ],
             number: 1,
             falseshow: true,
             currentSlide: 0,
             slides: [
-                { image: 'siman450.png', alt: ' سیمان 50 کیلویی', },
-                { image: 'siman450.png', alt: ' سیمان 50 کیلویی', },
+                { image: 'siman450.jpg', alt: ' سیمان 50 کیلویی', },
+                { image: 'siman450.jpg', alt: ' سیمان 50 کیلویی', },
             ],
             showlike: true,
         }

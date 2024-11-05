@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="column has-text-centered p-0 is-hidden-mobile">
-                    <img src="login.png" alt="صفحه ورود سیمان شاپ" style="height: 570px;">
+                    <img src="login.jpg" alt="صفحه ورود سیمان شاپ" style="height: 570px;">
                 </div>
             </div>
         </div>

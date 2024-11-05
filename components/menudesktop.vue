@@ -65,7 +65,7 @@
         <div class="column py-0">
           <div class="navbar-end is-hidden-mobile">
             <NuxtLink class=" is-align-content-center" to="/">
-              <img src="logo.png" alt="" style="width: 40px;">
+              <img src="logo.jpg" alt="لوگوی سیمان شاپ">
             </NuxtLink>
             <NuxtLink class="has-text-black is-align-content-center pr-2" to="/">
               سیمان شاپ

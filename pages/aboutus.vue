@@ -2,7 +2,7 @@
     <div class="is-relative">
         <div class="max-width-1160px mt-6 py-6">
             <div class="has-text-centered">
-                <img src="logo.jpg" alt="لوگو" style="width: 185px;">
+                <img src="logoaboutwe.jpg" alt="لوگو">
             </div>
             <div class="columns is-vcentered is-mobile mx-0 mt-5">
                 <div class="column pr-0">
