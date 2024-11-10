@@ -349,7 +349,7 @@
       </p>
       <div class="is-relative">
         <div class="columns p-5 is-vcentered mx-0 img-background-shadow-black  border-radius-search-input-header mt-5">
-          <div class="column px-5">
+          <div class="column z-index2-aboutwe px-5">
             <p class="mt-4 has-text-justified line-height-description has-text-white has-text-weight-bold">
               شرکت ما یکی از پیشگامان در صنعت فروش سیمان است. با بیش از دو دهه تجربه، ما به عنوان یک منبع قابل اعتماد
               برای
@@ -364,8 +364,8 @@
               </button>
             </NuxtLink>
           </div>
-          <div class="column has-text-centered">
-            <img class="border-radius" src="aboutwe2.jpg" alt="درباره ما">
+          <div class="column z-index2-aboutwe has-text-centered">
+            <img class="border-radius" src="aboutwe1.jpg" alt="درباره ما">
           </div>
         </div>
       </div>
@@ -468,12 +468,28 @@ export default {
 }
 
 .img-background-shadow-black {
-  background-image: url('/siman3333.png');
+  position: relative;
+  background-image: url('/aboutwe2.jpg');
   background-size: cover;
   background-position: center;
-
+  overflow: hidden;
 }
 
+.img-background-shadow-black::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: inherit;
+  z-index: 1;
+}
+.z-index2-aboutwe{
+  position: relative;
+  z-index: 2;
+}
 .overflow-x-auto {
   overflow-x: auto;
 }
