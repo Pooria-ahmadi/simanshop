@@ -486,10 +486,12 @@ export default {
   border-radius: inherit;
   z-index: 1;
 }
-.z-index2-aboutwe{
+
+.z-index2-aboutwe {
   position: relative;
   z-index: 2;
 }
+
 .overflow-x-auto {
   overflow-x: auto;
 }

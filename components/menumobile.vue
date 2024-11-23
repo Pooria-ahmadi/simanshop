@@ -1,6 +1,6 @@
 <template>
     <div class="is-hidden-desktop">
-        <div class="columns mx-0 py-0 is-mobile box is-hidden-desktop is-vcentered">
+        <div class="columns mx-0 py-0 is-mobile box is-hidden-desktop is-hidden-mobile is-hidden-tablet-only is-vcentered">
             <div class="column pb-0">
                 <div class="navbar-burger" @click="toggleMenu">
                     <span></span>
