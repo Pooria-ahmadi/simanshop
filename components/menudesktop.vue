@@ -13,13 +13,13 @@
               </button>
             </div>
 
-            <div id="navbar-menu" class="navbar-menu" :class="{ 'is-active': isMenuActive }">
+            <div  class="navbar-menu" :class="{ 'is-active': isMenuActive }" style="box-shadow: none;">
               <div class="navbar-start">
                 <NuxtLink class="navbar-item has-text-grey text-hover-black" to="/">
                   خانه
                 </NuxtLink>
                 <div class="navbar-item has-dropdown is-hoverable ">
-                  <NuxtLink class="navbar-item has-text-grey text-hover-black bg-hover-none" to="/category">
+                  <NuxtLink class="navbar-item has-text-grey text-hover-black bg-transparent" to="/category">
                     محصولات
                   </NuxtLink>
                   <div class="navbar-dropdown">
@@ -31,15 +31,12 @@
                       <li class="has-subcategory">
                         <NuxtLink class="navbar-item text-hover-black" to="/">سیمان</NuxtLink>
                         <div class="subcategory-box has-background-white p-4">
-                          <p>
+                          <p class="has-text-info">
                             همه محصولات سیمان >
                           </p>
-                          <p class="has-text-black has-text-centered is-underlined is-size-6"> انواع سیمان</p>
+                          <p class="has-text-black has-text-centered is-underlined is-size-6 my-4"> انواع سیمان</p>
                           <ul>
-                            <li class="subcategory-item">کلمه اول</li>
-                            <li class="subcategory-item">کلمه دوم</li>
-                            <li class="subcategory-item">کلمه سوم</li>
-                            <li class="subcategory-item">کلمه چهارم</li>
+                            <li class="subcategory-item width-178px" v-for="(siman, index) in menusiman" :key="index">{{ siman }}</li>
                           </ul>
                         </div>
                       </li>
@@ -77,6 +74,7 @@ export default {
     return {
       isMenuActive: false,
       menuforShopData: [],
+      menusiman:[],
     };
   },
   methods: {
@@ -93,14 +91,27 @@ export default {
             .map((item) => item.menuforshop);
         })
     },
+    fetchsimanData() {
+      this.$axios
+        .get("https://fapi.simanshop.com/api/auth/MenusForShop")
+        .then((response) => {
+          this.menusiman = response.data
+            .slice(6, 10)
+            .map((item) => item.menuforshop);
+        })
+    },
   },
   mounted() {
     this.fetchMenuData();
+    this.fetchsimanData();
   },
 }
 </script>
 
 <style scoped>
+.width-178px{
+  width: 178px;
+}
 .has-subcategory {
   position: relative;
 }
@@ -142,6 +153,14 @@ export default {
 }
 
 .text-hover-black:hover {
+  color: black;
+}
+.bg-transparent {
+  background-color: transparent; /* پس‌زمینه شفاف */
+  transition: color 0.3s ease, background-color 0.3s ease; /* برای ایجاد انیمیشن */
+}
+
+.bg-transparent:hover {
   color: black;
 }
 </style>
